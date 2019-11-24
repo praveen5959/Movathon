@@ -1,0 +1,32 @@
+<div class="container">
+    <br>
+<input type="text" class="form-control" id="movieSearch" placeholder="Enter movie" [(ngModel)]="movieSearch">
+<br>
+<div class="row">
+    <div class="col-md-1">        
+        <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+    </div>
+    <div class="col-md-1">
+        <button class="btn btn-danger" (click)="redirectToWatchlist()">WatchList</button>
+    </div>
+    </div>
+
+<br>
+<div class="container">
+        <div class="row">
+    <div *ngFor="let movie of dataSearch">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{movie.Poster}}" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title" id="title">{{movie.Title}}</h5>
+                <p class="card-text">{{movie.Year}}</p>
+                <button class="btn btn-primary" (click)="wishlist($event)">Add to Watchlist</button>
+                </div>
+            </div>
+            <br>
+        </div>
+        </div>
+    </div>
+</div>
+</div>

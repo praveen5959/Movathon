@@ -1,0 +1,24 @@
+<br>
+<br>
+<div class="container">
+  <h5>{{auth.displayName}}'s WatchList!</h5>
+  <br>
+  <div class="row">
+    <div *ngFor="let movie of movieArray">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img
+            class="card-img-top"
+            src="{{ movie.Poster }}"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title" id="title">{{movie.Title}}</h5>
+            <p class="card-text">{{movie.Year}}</p>
+          </div>
+        </div>
+        <br />
+      </div>
+    </div>
+  </div>
+</div>
