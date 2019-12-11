@@ -27,5 +27,21 @@ export class WatchlistComponent implements OnInit {
     }
     console.log(this.movieArray);
   }
+  remove(event){
+    console.log(event);
+    
+    event.target.previousElementSibling.visibility='hidden';
+  //   var user=this.auth.userId;
+  //   var arr=window.sessionStorage[String(user)];
+  //   console.log(arr);
+    
+  //   for( var i = 0; i < arr.length; i++){ 
+  //     if ( arr[i] === title) {
+  //       arr.splice(i, 1);
+  //     }
+  //  }
+  //  console.log(arr);
+   
+  }
 
 }
