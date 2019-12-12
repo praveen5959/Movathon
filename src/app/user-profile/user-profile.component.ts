@@ -42,5 +42,8 @@ export class UserProfileComponent implements OnInit {
       console.log(this.data.Search);
   });
 }    
+signOut(){
+  this.auth.signOut();
+}
   
 }
